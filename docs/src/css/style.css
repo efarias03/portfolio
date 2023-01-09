@@ -261,11 +261,9 @@ li{
 
 /* The slider */
 .slider {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: fixed;
+  top: 2rem;
+  right: 1rem;
   width: var(--width-of-switch);
   height: var(--height-of-switch);
   background-color: #f4f4f5;
@@ -983,6 +981,7 @@ form textarea {
 
 .burger {
   position: relative;
+  top: -.51rem;
   width: 40px;
   height: 30px;
   background: transparent;
