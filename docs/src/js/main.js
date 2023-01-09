@@ -4,10 +4,15 @@ let innerCursor = document.querySelector(".inner-cursor");
 let outerCursor = document.querySelector(".outer-cursor");
 
 const switchCheckBox = document.querySelector("#switch-input");
+const screensizeMin = window.matchMedia("(min-width: 769px)");
+const screensizeMax = window.matchMedia("(max-width: 769px)");
+
 
 const menuCheckBox = document.querySelector("#nav-btn");
 const menu = document.querySelector("#nav-menu");
 const nav = document.querySelector("nav");
+
+const projects = document.querySelectorAll(".project-card");
 
 /* Move Cursor */
 circles.forEach(function (circle) {
@@ -170,7 +175,17 @@ ScrollReveal().reveal('.projects-wrap', { delay: 350 });
 ScrollReveal().reveal('.knowledgies-wrap', { delay: 450 });
 ScrollReveal().reveal('form', { delay: 450 });
 
-VanillaTilt.init(document.querySelectorAll(".card"));
+const boxes = document.querySelectorAll(".card");
+
+window.addEventListener("resize", () => {
+  VanillaTilt.init(boxes);
+  if (window.innerWidth < 769) {
+    boxes.forEach(box => {
+      box.vanillaTilt.destroy();
+    });
+  }
+})
+
 
 /*
 <section id="email-form-section">

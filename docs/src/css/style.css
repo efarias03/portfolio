@@ -139,7 +139,7 @@ nav.scrolled {
 
 .nav-ul {
   position: relative;
-  top: 50%;
+  top: 30%;
   right: 1rem;
   width: 90%;
   height: 50%;
@@ -261,9 +261,9 @@ li{
 
 /* The slider */
 .slider {
-  position: fixed;
-  top: 2.6rem;
-  left: 14.5rem;
+  position: absolute;
+  top: -1rem;
+  left: 0;
   right: 0;
   bottom: 0;
   width: var(--width-of-switch);
@@ -468,11 +468,11 @@ input:checked + .slider:before {
 .projects-list {
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(265px, .5fr));
   justify-content: center;
   align-items: center;
 
-  gap: 4rem;
+  gap: 2rem;
   width: 100%;
   margin-top: 5rem;
 }
@@ -488,6 +488,7 @@ input:checked + .slider:before {
   display: block;
   justify-content: center;
   align-items: center;
+  transition: .1s;
 }
 
 .card .content {
@@ -974,7 +975,7 @@ form textarea {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  top: 2.7rem;
+  top: 1.6rem;
   left: 1rem;
   background-color: transparent;
   width: 5rem;
@@ -1078,10 +1079,10 @@ form textarea {
 
 
 ul.menu-active {
-  width: 95vw;
-  height: 95vh;
-  top: 25%;
-  left: 2.7%;
+  width: 98vw;
+  height: 98vh;
+  top: 15%;
+  left: 1%;
   flex-direction: column;
   gap: 3rem;
 
