@@ -4,14 +4,6 @@
     perspective: 300px;
 }
 
-.intro-screen {
-
-}
-
-#intro {
-
-}
-
 .container {
     transform: translateZ(-300px);
 }
