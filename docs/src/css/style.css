@@ -239,6 +239,13 @@ li{
 
 
 /* The switch - the box around the slider */
+.switch-div {
+  position: relative;
+  top: -1rem;
+  z-index: 10;
+}
+
+
 .switch {
   --width-of-switch: 3.5em;
   --height-of-switch: 2em;
@@ -262,7 +269,7 @@ li{
 /* The slider */
 .slider {
   position: absolute;
-  top: -1rem;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -271,7 +278,6 @@ li{
   background-color: #f4f4f5;
   transition: .4s;
   border-radius: 30px;
-  z-index: 10;
 }
 
 
