@@ -132,9 +132,34 @@ nav.scrolled {
   right: 5.3rem;
   bottom: 93vh;
 
-  width: fit-content;
-  height: fit-content;
+  width: 100%;
+  height: 10rem;
+}
 
+.nav-btns .switch-div, .menu-btn-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  position: fixed;
+
+  opacity: 1;
+
+  transition: .8s ease;
+  width: 5rem;
+
+  z-index: 3;
+}
+
+.nav-btns .switch-div {
+  top: 2rem;
+  right: 1rem;
+}
+
+.nav-btns .menu-btn-div {
+  top: 2.05rem;
+  left: 1rem;
 }
 
 .nav-ul {
@@ -155,17 +180,6 @@ nav.scrolled {
 li{
   transition: .7s ease;
 }
-
-.menu-btn-div {
-  position: fixed;
-  left: 2rem;
-  top: 4rem;
-
-  opacity: 1;
-
-  transition: .8s ease;
-}
-
 
 .burger input {
   display: none;
@@ -239,12 +253,6 @@ li{
 
 
 /* The switch - the box around the slider */
-.switch-div {
-
-  top: -1rem;
-  z-index: 3;
-}
-
 
 .switch {
   --width-of-switch: 3.5em;
@@ -981,9 +989,12 @@ form textarea {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  top: 1.6rem;
-  left: 1rem;
   background-color: transparent;
+  position: fixed;
+  
+  opacity: 1;
+
+  transition: .8s ease;
   width: 5rem;
 
   z-index: 3;
