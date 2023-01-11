@@ -1033,6 +1033,10 @@ form textarea {
   color: #fff;
 }
 
+.dark .menu-active .language-options a {
+  color: #0f141a;
+}
+
 .menu-active .language-options a.en-active {
   color: #be3227;
 }
