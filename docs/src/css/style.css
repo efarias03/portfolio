@@ -1029,26 +1029,6 @@ form textarea {
   color: #00408f;
 }
 
-.menu-active .language-options a {
-  color: #fff;
-}
-
-.dark .menu-active .language-options a {
-  color: #0f141a;
-}
-
-.menu-active .language-options a.en-active {
-  color: #be3227;
-}
-
-.menu-active .language-options a.pt-active {
-  color: #009c37;
-}
-
-.menu-active .language-options a:hover {
-  color: #00408f;
-}
-
 /* Responsive */
 
 @media (max-width: 768px)
@@ -1207,6 +1187,25 @@ ul.menu-active #pt-preffered {
   color: #fff;
 }
 
+.menu-active .language-options a {
+  color: #fff;
+}
+
+.dark .menu-active .language-options a {
+  color: #0f141a;
+}
+
+.menu-active .language-options a.en-active {
+  color: #be3227;
+}
+
+.menu-active .language-options a.pt-active {
+  color: #009c37;
+}
+
+.menu-active .language-options a:hover {
+  color: #00408f;
+}
 
 .dark ul.menu-active {
   background-color: #e6e6e6;
