@@ -65,7 +65,7 @@ function mouseClickAnimation(e) {
 
 /* Hover Animation */
 
-let links = Array.from(document.querySelectorAll("a"));
+let links = Array.from(document.querySelectorAll(".menu-link"));
 let inputs = Array.from(document.querySelectorAll("input"))
 const slider = document.querySelector(".slider");
 
@@ -121,6 +121,7 @@ switchCheckBox.addEventListener("change", () => {
 
 menuCheckBox.addEventListener("change", () => {
   menu.classList.toggle("menu-active");
+  nav.classList.toggle("menu-active");
 });
 
 function toggleNavScrolled() {
@@ -144,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function toggleMenu(x) {
   x.addEventListener("click", () => {
-    menu.classList.toggle("menu-active");
+    menu.classList.remove("menu-active");
     menuCheckBox.checked = false;
   })
 }
@@ -187,6 +188,13 @@ window.addEventListener("resize", () => {
 })
 
 
+const style = 'background-color: white; color: black;text-decoration: underline; border: 4px solid black; font-size: 2em; font-family: Bebas Neue, sans-serif'
+console.log("%cEnzoF", style);
+console.log("");
+console.log("You can turn your photo to a line drawing like mine at: https://ai-draw.tokyo/en/");
+console.log("All Credits of the Drawing to the Creator of the AI");
+console.log("https://micku7zu.github.io/vanilla-tilt.js/ for the '3D' Cards");
+console.log("");
 /*
 <section id="email-form-section">
       <div class="form-div">
