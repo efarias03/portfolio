@@ -1182,11 +1182,6 @@ ul.menu-active a {
   transition: opacity .4s ease-in-out;
 }
 
-
-ul.menu-active #pt-preffered {
-  color: #fff;
-}
-
 .menu-active .language-options a {
   color: #fff;
 }
