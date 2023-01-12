@@ -146,6 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function toggleMenu(x) {
   x.addEventListener("click", () => {
     menu.classList.remove("menu-active");
+    nav.classList.remove("menu-active");
     menuCheckBox.checked = false;
   })
 }
