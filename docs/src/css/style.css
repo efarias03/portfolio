@@ -42,37 +42,15 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10rem;
 
+  gap: 5rem;
+
+  overflow-y: auto;
+
+  height: 100%;
   width: 100vw;
 }
 
-.bg {
-  position: fixed;
-  top: 5vh;
-}
-
-
-@keyframes animate {
-  0% {
-    opacity: 0;
-    fill: none;
-    stroke-dashoffset: 255000;
-  }
-
-  30% {
-    opacity: 10;
-    fill: none;
-    stroke-dashoffset: 255000;
-  }
-
-  90% {
-  }
-
-  100% {
-    opacity: 10;
-  }
-}
 
 .error-div {
   display: flex;
@@ -121,12 +99,6 @@ li:hover > a::after {
   width: 100%;
   transition: .8s ease;
 }
-
-
-canvas {
-  pointer-events: none;
-}
-
 
 nav {
   position: fixed;
@@ -343,7 +315,13 @@ input:checked + .slider:before {
 /* About Content */
 
 #about-section {
-  margin-top: 20rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 2rem;
 }
 
 .about-div {
@@ -351,6 +329,7 @@ input:checked + .slider:before {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transform: translateZ(0);
 }
 
 .about-header {
@@ -358,7 +337,6 @@ input:checked + .slider:before {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  top: 20vh;
 }
 
 .about-header span , .project-card-desc a{
@@ -387,7 +365,7 @@ input:checked + .slider:before {
   text-align: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 15rem;
+  margin-top: 5rem;
   width: 90vw;
 
   font-size: 1.5rem;
@@ -453,19 +431,6 @@ input:checked + .slider:before {
 
 /* Projects */ 
 
-
-#projects-section, #knowledge-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  gap: 3rem;
-
-  padding-top: 5rem;
-}
-
-
 .projects-section-title, .knowledge-section-title {
   font-family: "Bebas Neue", cursive;
   text-align: center;
@@ -483,7 +448,7 @@ input:checked + .slider:before {
   height: fit-content;
 }
 
-.projects-wrap-div, .knowledgies-div, .form-div  {
+.projects-wrap-div, .knowledgies-div, .form-div, #projects-section, #knowledge-section   {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -874,7 +839,7 @@ form textarea {
 /* ScrollBar */ 
 
 ::-webkit-scrollbar {
-  display: none;
+  
 }
 
 
