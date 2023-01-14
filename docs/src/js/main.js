@@ -189,9 +189,11 @@ ScrollReveal().reveal('form', { delay: 450 });
 const style = 'background-color: white; color: black;text-decoration: underline; border: 4px solid black; font-size: 2em; font-family: Bebas Neue, sans-serif'
 console.log("%cEnzoF", style);
 console.log("");
+console.log("");
 console.log("You can turn your photo to a line drawing like mine at: https://ai-draw.tokyo/en/");
 console.log("All Credits of the Drawing to the Creator of the AI");
 console.log("https://micku7zu.github.io/vanilla-tilt.js/ for the '3D' Cards");
+console.log("");
 console.log("");
 /*
 <section id="email-form-section">
