@@ -34,14 +34,14 @@
     height: 0;
     border: 6px solid transparent;
     border-color: #0f141a transparent transparent transparent;
-    transition: .1s ease;
+    transition: .5s ease;
   }
   
   /* Point the arrow upwards when the select box is open (active): */
   .select-selected.select-arrow-active:after {
     border-color: transparent transparent #0f141a transparent;
     top: 8px;
-    transition: .1s ease;
+    transition: .5s ease;
   }
   
   /* style the items (options), including the selected item: */
@@ -51,6 +51,7 @@
     color: #0f141a;
     padding-top: .2rem;
     padding-right: 1rem;
+    transition: .5s ease;
     
     border: 1px solid currentColor;
 }

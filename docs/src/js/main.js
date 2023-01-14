@@ -66,13 +66,20 @@ function mouseClickAnimation(e) {
 /* Hover Animation */
 
 let links = Array.from(document.querySelectorAll(".menu-link"));
-let inputs = Array.from(document.querySelectorAll("input"))
+let inputs = Array.from(document.querySelectorAll("input"));
+let buttons = Array.from(document.querySelectorAll(".see-project-button"));
+
+
 const slider = document.querySelector(".slider");
 
 slider.addEventListener("mouseover", growCursor(slider))
 
 links.forEach(link => {
   growCursor(link);
+})
+
+buttons.forEach(button => {
+  growCursor(button);
 })
 
 function growCursor(x) {
@@ -177,16 +184,6 @@ ScrollReveal().reveal('.projects-wrap', { delay: 350 });
 ScrollReveal().reveal('.knowledgies-wrap', { delay: 450 });
 ScrollReveal().reveal('form', { delay: 450 });
 
-const boxes = document.querySelectorAll(".card");
-
-window.addEventListener("resize", () => {
-  VanillaTilt.init(boxes);
-  if (window.innerWidth < 769) {
-    boxes.forEach(box => {
-      box.vanillaTilt.destroy();
-    });
-  }
-})
 
 
 const style = 'background-color: white; color: black;text-decoration: underline; border: 4px solid black; font-size: 2em; font-family: Bebas Neue, sans-serif'

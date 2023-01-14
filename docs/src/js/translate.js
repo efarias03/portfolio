@@ -101,7 +101,7 @@ function changeLanguage(language) {
 
 let data = {
     portuguese: {
-        welcomeTitle: "Bem Vindo ao meu Portfolio",
+        welcomeTitle: "bem vindo ao meu portfolio",
         homeLink: "Principal",
         aboutLink: "Sobre",
         projectsLink: "Projetos",
@@ -124,7 +124,7 @@ let data = {
     },
 
     english: {
-        welcomeTitle: "Welcome to My Portfolio",
+        welcomeTitle: "welcome to my portfolio",
         homeLink: "Home",
         aboutLink: "About",
         projectsLink: "Projects",

@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Do+Hyeon&family=Poppins:wght@400;600;700&family=Rajdhani:wght@400;500&display=swap');
 
+@font-face {
+  font-family: Sackers Gothic;
+  src: url(../assets/font/sackers/sackers-gothic-std.otf);
+}
+
 @keyframes menuBurguerSpawn {
   0% {
     left: -10rem;
@@ -49,6 +54,10 @@ html {
 
   height: 100%;
   width: 100vw;
+}
+
+.bg svg path{
+  stroke: #1373e9;
 }
 
 
@@ -103,7 +112,7 @@ li:hover > a::after {
 nav {
   position: fixed;
   width: 100%;
-  height: 10vh;
+  height: 5rem;
   display: flex;
 
   background-color: #e6e6e6;
@@ -347,16 +356,12 @@ input:checked + .slider:before {
 }
 
 .about-header h1{
-  font-family: "Bebas Neue", cursive;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: #0f141a;
   text-align: center;
-  color: transparent;
-  -webkit-text-stroke: 1px #4c4e6b;
   filter: drop-shadow(0 0 25px #717388);
-  gap: 1rem;
+  transition: .6s ease-in-out;
 }
 
 .about-text {
@@ -398,6 +403,7 @@ input:checked + .slider:before {
   border-right: none;
   font-weight: 500;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: .5s ease;
 }
 
 .resume-div .resume-group a:hover {
@@ -444,7 +450,7 @@ input:checked + .slider:before {
   align-items: center;
   flex-direction: column;
 
-  width: 90vw;
+  width: 95%;
   height: fit-content;
 }
 
@@ -468,72 +474,95 @@ input:checked + .slider:before {
 
 .projects-list {
   display: grid;
-  grid-auto-flow: row;
-  grid-template-columns: repeat(auto-fit, minmax(265px, auto));
   justify-content: center;
   align-items: center;
 
-  gap: 2rem;
   width: 100%;
   margin-top: 5rem;
 }
 
+.projects-list .projects-ul {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: auto;
+  margin-right: -1.75em;
+  margin-left: -1.75em;
+  gap: 1rem;
+  list-style: none;
+}
+
 .card {
   position: relative;
-  width: 280px;
-  height: 400px;
-
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  border-radius: 15px;
-  overflow: hidden;
-  display: block;
+  display: flex;
   justify-content: center;
   align-items: center;
-  transition: .1s;
+  flex-direction: column;
+  width: 20rem;
+  height: 18.75rem;
+
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
 
 .card .content {
-  padding: 20px;
+  background: #0f141a;
+  width: 100%;
+  height: 100%;
+  padding-top: 5px;
   text-align: center;
-  transform: translateY(-20rem);
   opacity: 1;
   transition: .5s;
+}
+
+.card .card-tags {
+  position: absolute;
+  display: block;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.card .card-tags .tags-ul {
+  display: flex;
+  justify-content: left;
+  padding-left: 1rem;
+  align-items: center;
+  gap: 1rem;
+  list-style: none
+}
+
+.card .card-tags .tags-ul .tags-li {
+    border: 1px solid rgb(83, 83, 83);
+    padding: 0 5px 0 5px;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+.card .card-tags .tags-ul .tags-li:hover {
+  color: #e6e6e6;
+  border-color: #fff;
+  background-color: #0f141a;
 }
 
 .card img{
   width: 100%;
   height: 125%;
   object-fit: cover;
-  object-position: 50% 50%;
   transition: .5s ease-out;
   z-index: -1;
 }
 
-
-.card:hover img {
-  object-position: 55% 50%;
-  transition: .5s;
-}
-
 .card:hover .content {
-  transform: translateY(-22rem);
   opacity: 1;
 }
 
-.card .content h2 {
-  position: absolute;
-  top: -200px;
-  right: -1rem;
-  font-size: 7rem;
-  color: #3a3b407a;
-  pointer-events: none;
-  z-index: -1;
-}
-
 .card .content h3 {
+  font-family: "Bebas Neue", sans-serif;
   font-size: 1.8em;
   color: #fff;
-  z-index: 1;
 } 
 
 .card .content p {
@@ -543,22 +572,47 @@ input:checked + .slider:before {
 }
 
 .card .content a {
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
   position: relative;
   display: inline-block;
   padding: 8px 20px;
   margin-top: 15px;
-  color: #e6e6e6;
-  background: #0f141aad;
-  border: 1px solid currentColor;
-  font-weight: 500;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  transition: .2s linear;
 }
+
+.card .content a::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -6px;
+  width: 5px;
+  height: 2.7rem;
+  border: 2px solid currentColor;
+  border-left: none;
+  border-right: none;
+}
+
+.card .content a::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: -6px;
+  width: 5px;
+  height: 2.7rem;
+  border: 2px solid currentColor;
+  background: none;
+  border-left: none;
+  border-right: none;
+}
+
 
 .card .content a:hover {
-  background: #6f00ff;
+  transition: .2s linear;
+  background: #00bbff;
   color: #fff;
 }
-
 
 /* Knowledge section */
 .knowledgies-div {
@@ -635,14 +689,13 @@ input:checked + .slider:before {
 
 /* footer and contacts */
 
-#footer-contacs {
-  margin-top: 100rem;
+#footer-contacts {
+  margin-top: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
-  background-color: #91ff00;
   width: 100vw;
 }
 
@@ -800,6 +853,9 @@ form input {
 }
 
 form input[type='submit'] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Bebas Neue", cursive;
   font-size: 1rem;
   letter-spacing: .5rem;
@@ -807,7 +863,7 @@ form input[type='submit'] {
 }
 
 form input[type='submit']:hover {
-  background: #6f00ff;
+  background: #00bbff;
   letter-spacing: .7rem;
   transition: .6s ease
 }
@@ -839,7 +895,7 @@ form textarea {
 /* ScrollBar */ 
 
 ::-webkit-scrollbar {
-  
+  display: none;
 }
 
 
@@ -907,6 +963,11 @@ form textarea {
   transition: .5s linear;
 }
 
+.dark .about-header h1 {
+  color: #fff;
+  transition: .6s ease-in-out;
+}
+
 .dark .knowledgies-card-body svg path, .dark .knowledgies-card-body svg circle, .dark .svg-path {
   fill: #f4f4f5;
 }
@@ -963,18 +1024,22 @@ form textarea {
 }
 
 .dark .select-selected:after {
+  transition: .5s ease;
   border-color: #fff transparent transparent transparent;
 }
 
 .dark .select-selected {
+  transition: .5s ease;
   color: #fff;
 }
 
 .dark .select-items {
+  transition: .5s ease;
   background: #fff;
 }
 
 .dark .select-selected.select-arrow-active:after {
+  transition: .5s ease;
   border-color: transparent transparent #fff transparent;
 }
 
@@ -1137,6 +1202,9 @@ ul.menu-active {
   transition: opacity .6s ease-in-out, background .6s ease-in-out;
 }
 
+.projects-list .projects-ul {
+  justify-content: center;
+}
 
 ul.menu-active a {
   opacity: 1;
