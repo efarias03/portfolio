@@ -68,6 +68,7 @@ function mouseClickAnimation(e) {
 let links = Array.from(document.querySelectorAll(".menu-link"));
 let inputs = Array.from(document.querySelectorAll("input"));
 let buttons = Array.from(document.querySelectorAll(".see-project-button"));
+let languageopt = Array.from(document.querySelectorAll(".language-opt"));
 
 
 const slider = document.querySelector(".slider");
@@ -81,6 +82,11 @@ links.forEach(link => {
 buttons.forEach(button => {
   growCursor(button);
 })
+
+languageopt.forEach(opt => {
+  growCursor(opt);
+})
+
 
 function growCursor(x) {
   x.addEventListener("mouseover", () => {
